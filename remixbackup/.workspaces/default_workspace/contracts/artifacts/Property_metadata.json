@@ -1,89 +1,54 @@
 {
 	"compiler": {
-		"version": "0.8.2+commit.661d1103"
+		"version": "0.8.4+commit.c7e474f2"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "int256",
-						"name": "_price",
-						"type": "int256"
-					},
-					{
-						"internalType": "string",
-						"name": "_location",
-						"type": "string"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [],
-				"name": "getPrice",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "location",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "price",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "int256",
-						"name": "_price",
-						"type": "int256"
-					}
-				],
-				"name": "setPrice",
+				"name": "f1",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "x",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "y",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -100,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/05_constructor.sol": "Property"
+			"contracts/07_overflows_underflows.sol": "Property"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -114,12 +79,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/05_constructor.sol": {
-			"keccak256": "0xa74c787a253d9d4fa704853e539eec1711488248f853f45a890c47930f4fe8d1",
+		"contracts/07_overflows_underflows.sol": {
+			"keccak256": "0x0238b7b8dd2d555950e0395c802978381a02526be3d6b326627fade551b3c904",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://2040f1432343145152fafd307ce2373874d1c0eb7f10d33586cee32478e7ae5c",
-				"dweb:/ipfs/Qmd1QgucRgjpmsYYLy2cb6WBNanLk4k93nS2Hz9fv8yxjW"
+				"bzz-raw://a76b96f4eaeab10c92e1129d4c2e602902744d0a3fa85256cf002a40f492076e",
+				"dweb:/ipfs/QmTp44qq6r1YWY4AawhW4fV4Y1x4HbK6ENma9fSUmppknP"
 			]
 		}
 	},
