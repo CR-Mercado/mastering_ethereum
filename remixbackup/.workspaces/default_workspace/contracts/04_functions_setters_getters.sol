@@ -22,7 +22,7 @@ contract Property {
   }
   
   // getter (of state variable) - getter functions are free reads
-  // view is for read only (similar to pure) 
+  // view is for read only - unlike pure, which neither reads or writes from the chain
   // return indicates it returns an integer 
    // NOTE: this function is not needed for public state variables
   function getPrice() public view returns(int){ 

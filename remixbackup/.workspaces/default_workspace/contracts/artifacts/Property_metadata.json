@@ -6,17 +6,20 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getLocation",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "_price",
+						"type": "int256"
+					},
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "_location",
 						"type": "string"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
 				"inputs": [],
@@ -46,6 +49,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "price",
 				"outputs": [
 					{
@@ -55,19 +71,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_location",
-						"type": "string"
-					}
-				],
-				"name": "setLocation",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -97,7 +100,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/04_functions_setters_getters.sol": "Property"
+			"contracts/05_constructor.sol": "Property"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -111,12 +114,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/04_functions_setters_getters.sol": {
-			"keccak256": "0x8cf935a69dab3c2d6f180bae4addab12e8d7d9d4ad922162d0dfba6c0232c434",
+		"contracts/05_constructor.sol": {
+			"keccak256": "0xa74c787a253d9d4fa704853e539eec1711488248f853f45a890c47930f4fe8d1",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://b999b27f4d37bd296da0bfd126a516f8da599fe74259bcaa46f6f3826823d9c2",
-				"dweb:/ipfs/QmTmcVS3iLfTL87o8nnmitAQyoS58J7iiivfdQmp243MeT"
+				"bzz-raw://2040f1432343145152fafd307ce2373874d1c0eb7f10d33586cee32478e7ae5c",
+				"dweb:/ipfs/Qmd1QgucRgjpmsYYLy2cb6WBNanLk4k93nS2Hz9fv8yxjW"
 			]
 		}
 	},
