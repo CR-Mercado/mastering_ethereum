@@ -4,7 +4,8 @@ pragma solidity >= 0.5.0 <0.9.0;
 
 contract Property { 
   int public price;  // state variable, default 0 
-  string location = "London"; 
+  // default to private; make public
+  string public location = "London"; 
   
   // Remix will create buttons for interacting with setter and getter functions (orange and blue respectively)
   
@@ -16,14 +17,27 @@ contract Property {
    // public vs private vs internal vs external discussed later
   // intereacting with the contract
   
-  function setPrice(int _price) public{ 
+  function setPrice(int _price) public { 
       price = _price;
   }
   
   // getter (of state variable) - getter functions are free reads
   // view is for read only (similar to pure) 
   // return indicates it returns an integer 
+   // NOTE: this function is not needed for public state variables
   function getPrice() public view returns(int){ 
       return price;
   }
+  
+  // make a local variable for setting and getting location
+  function setLocation(string memory _location) public { 
+      location = _location; 
+  }
+  
+  // retrieve string from memory
+  function getLocation() public view returns(string memory){
+   return location;   
+  }
+  
+  
 } 
