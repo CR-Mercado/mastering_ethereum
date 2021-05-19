@@ -6,7 +6,7 @@ XX_subject.sol
 
 Where XX iterates from 02 - XX (all lessons I identify and split up), and subject = my summary of the topic at hand. `.sol` is the extension for solidity smart contracts. 
 
-I am taking the following course: (Mastering Ethereum & Solidity with Real World Apps)[https://www.udemy.com/course/master-ethereum-and-solidity-programming-with-real-world-apps].
+I am taking the following course: Mastering Ethereum & Solidity with Real World Apps at - https://www.udemy.com/course/master-ethereum-and-solidity-programming-with-real-world-apps.
 
 I definitely recommend it, I'm learning a lot and I'm only 25% of the way done with 5 case studies 
 
