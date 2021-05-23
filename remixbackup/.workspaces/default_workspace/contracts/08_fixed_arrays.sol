@@ -22,7 +22,7 @@ contract FixedSizeArrays {  // all elements must be of the same type
     
     // return length of array 
     function getLength() public view returns(uint){ // public function, only views, doesn't write to chain, returns an unsigned integer
-     return numbers.length;   // length is an intrinsic method of arrays. 
+     return numbers.length;   // length is an intrinsic method of arrays.
     }
 
     function setBytesArray() public {
@@ -30,7 +30,12 @@ contract FixedSizeArrays {  // all elements must be of the same type
     b2 = 'ab'; // (0x6162) // Hx ASCII codes 
     b3 = 'abc'; // (0x616263)
     // b3 = 'z';  // would be (0x7a0000)  notice the padding of 0s 
-    // b3[0] = 'a'; // fails, you cant change bytes within a fixed array 
+    // b3[0] = 'a'; // fails, you cant change byt
+    }
+    
+    function getNumbers(uint index) public view returns(uint){ 
+        return numbers[index];
     }
 
 }
+

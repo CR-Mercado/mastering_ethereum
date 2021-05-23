@@ -7,19 +7,43 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "f1",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "sold",
+				"name": "getPrice",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -27,28 +51,28 @@
 			},
 			{
 				"inputs": [],
-				"name": "x",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "uint8",
+						"internalType": "address",
 						"name": "",
-						"type": "uint8"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "y",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "int8",
-						"name": "",
-						"type": "int8"
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "setPrice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -59,13 +83,17 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"getPrice()": {
+					"notice": "Returns the price of Property "
+				}
+			},
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/07_overflows_underflows.sol": "Property"
+			"contracts/02_contract_structure.sol": "Property"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -79,12 +107,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/07_overflows_underflows.sol": {
-			"keccak256": "0x0238b7b8dd2d555950e0395c802978381a02526be3d6b326627fade551b3c904",
+		"contracts/02_contract_structure.sol": {
+			"keccak256": "0x029db3585ed5efc93e284c2111f5d8c01d65a40d999bd2535c15b7a47203cd35",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://a76b96f4eaeab10c92e1129d4c2e602902744d0a3fa85256cf002a40f492076e",
-				"dweb:/ipfs/QmTp44qq6r1YWY4AawhW4fV4Y1x4HbK6ENma9fSUmppknP"
+				"bzz-raw://4a72e5fd822a14de21f70d33d86f6e2ccfe5146837f5b894e6b109d08856470f",
+				"dweb:/ipfs/QmSPsfPoEaTRjJqezd9gd3LNQwAfpqdZViZaRKc1Fe5Zn8"
 			]
 		}
 	},

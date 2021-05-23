@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.8.2; 
+pragma solidity ^0.8.2;
 
 contract Property {  
     // 2 state variables: price, owner 
+    address public property_image_URL;
     uint private price;  
     address public owner;  
     
@@ -11,6 +12,7 @@ contract Property {
     constructor(){ 
         price = 0;
         owner = msg.sender;
+        property_image_URL = "www.google.com/image/image.jpg";
     } 
     
     // Function Modifier 

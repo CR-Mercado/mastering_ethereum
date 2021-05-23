@@ -6,39 +6,32 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "b1",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "bytes1",
-						"name": "",
-						"type": "bytes1"
+						"internalType": "uint256",
+						"name": "item",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "AddElement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "b2",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "bytes2",
-						"name": "",
-						"type": "bytes2"
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "b3",
+				"name": "getElement",
 				"outputs": [
 					{
-						"internalType": "bytes3",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bytes3"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -58,22 +51,10 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "getNumbers",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"inputs": [],
+				"name": "newArray",
+				"outputs": [],
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -97,25 +78,14 @@
 			},
 			{
 				"inputs": [],
-				"name": "setBytesArray",
+				"name": "popElement",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "setElement",
+				"inputs": [],
+				"name": "updateNum",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -134,7 +104,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/08_fixed_arrays.sol": "FixedSizeArrays"
+			"contracts/09_dynamic_arrays.sol": "DynamicArrays"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -148,12 +118,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/08_fixed_arrays.sol": {
-			"keccak256": "0x1616533d9f9901f18d4b9c64b0bd08a5366886c0e8f8628b2b5b46a372717f07",
+		"contracts/09_dynamic_arrays.sol": {
+			"keccak256": "0xad34eff4dc6d959edb4cddc548f08c48bf2c51d71ef7cd4d2b790aa78b6c04af",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://7a21736b175234ed8c6ee78170de5c7a61464667740f37cf660b3073fa0ec8c6",
-				"dweb:/ipfs/QmQMfbj6zaGSPAPyNFfCoPPawBKAahT4626cZvkRLACu1o"
+				"bzz-raw://98ba5bb64470481c06fe44f33eb97f5e5ef8acb4c864343d7a4ba5295aa4abde",
+				"dweb:/ipfs/Qmf3t1PGZuk9aBc67YKXVjr2RoPF2QynoU3tH5W4w2cLR6"
 			]
 		}
 	},
