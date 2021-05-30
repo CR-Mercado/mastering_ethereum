@@ -28,9 +28,9 @@ contract Property {
       string memory s1 = "abc";
       
       // The 3 types of ways to save data: 
-      // Storage (on blockchain, expensive)
-      // Stack (holds local variables inside functions as long as they don't require reference types, i.e. Stack can hold int, but not strings 
-      // Memeory free, but must be declared with memory. works with reference types (string, array, struct, mapping)
+      // Storage - on blockchain, expensive
+      // Stack - holds local variables inside functions as long as they don't require reference types, i.e. Stack can hold int, but not strings 
+      // Memory - free, but must be declared with memory. works with reference types (string, array, struct, mapping)
     } 
     
     

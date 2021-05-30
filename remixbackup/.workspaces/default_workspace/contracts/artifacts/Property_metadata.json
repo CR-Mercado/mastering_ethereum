@@ -7,33 +7,15 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
+				"name": "getLocation",
+				"outputs": [
 					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
-				"name": "OwnerChanged",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
-					}
-				],
-				"name": "changeOwner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -41,9 +23,9 @@
 				"name": "getPrice",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "int256",
 						"name": "",
-						"type": "uint256"
+						"type": "int256"
 					}
 				],
 				"stateMutability": "view",
@@ -51,12 +33,25 @@
 			},
 			{
 				"inputs": [],
-				"name": "owner",
+				"name": "location",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "string",
 						"name": "",
-						"type": "address"
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "price",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
 					}
 				],
 				"stateMutability": "view",
@@ -65,9 +60,22 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
+						"name": "_location",
+						"type": "string"
+					}
+				],
+				"name": "setLocation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
 						"name": "_price",
-						"type": "uint256"
+						"type": "int256"
 					}
 				],
 				"name": "setPrice",
@@ -83,17 +91,13 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {
-				"getPrice()": {
-					"notice": "Returns the price of Property "
-				}
-			},
+			"methods": {},
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/02_contract_structure.sol": "Property"
+			"contracts/04_functions_setters_getters.sol": "Property"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -107,12 +111,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/02_contract_structure.sol": {
-			"keccak256": "0x029db3585ed5efc93e284c2111f5d8c01d65a40d999bd2535c15b7a47203cd35",
+		"contracts/04_functions_setters_getters.sol": {
+			"keccak256": "0x4e9897891522136a15bffca16de71d99425ad1dab37ad16df4d58463bc679e28",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4a72e5fd822a14de21f70d33d86f6e2ccfe5146837f5b894e6b109d08856470f",
-				"dweb:/ipfs/QmSPsfPoEaTRjJqezd9gd3LNQwAfpqdZViZaRKc1Fe5Zn8"
+				"bzz-raw://db379be2db47083744b04fd37d841cb350beb60be91afe0d8a032a9c90960487",
+				"dweb:/ipfs/QmZQkkmiZpSXN3zT67Ebt3fR7gX44iD1yNvV7nbZkwDmH7"
 			]
 		}
 	},
