@@ -30,7 +30,4 @@ contract Property {
         // unchecked { x+= 1; }
     }
     
-
-    
-    
 }

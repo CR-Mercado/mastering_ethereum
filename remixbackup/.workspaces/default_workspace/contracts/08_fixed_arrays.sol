@@ -2,16 +2,17 @@
 
 pragma solidity >= 0.5.0 <0.9.0;
 
-contract FixedSizeArrays {  // all elements must be of the same type 
+contract FixedSizeArrays {  // a fixed array has elements of the same type 
 
     // defaults to [0,0,0] 
-    uint[3] public numbers = [1,2,3]; // 3 public integers, getter automatically created for public state variables. 
+    uint[3] public numbers = [1,2,3]; // 3 public integers. reminder: getter functions automatically created for public state variables. 
     
     
-    // special type of array that holds bytes directly - from 1 byte (0x00) to up to 32 bytes (0x00...00) // 64 0s after 0x   
-    bytes1 public b1; 
-    bytes2 public b2;
-    bytes3 public b3; 
+    // each of these are special types of array that holds bytes directly - from 1 byte (0x00) to up to 32 bytes (0x00...00) with 64 0s after 0x   
+    bytes1 public b1;  // 1 byte
+    bytes2 public b2;  // 2 bytes
+    bytes3 public b3;  // 3 bytes
+    // bytes32 public b32; // 32 bytes
     
     
     // change index'th value 

@@ -1,109 +1,75 @@
 {
 	"compiler": {
-		"version": "0.8.4+commit.c7e474f2"
+		"version": "0.5.0+commit.1d4f565a"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
+				"constant": true,
 				"inputs": [],
-				"name": "getLocation",
+				"name": "sold",
 				"outputs": [
 					{
-						"internalType": "string",
 						"name": "",
-						"type": "string"
+						"type": "bool"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
-				"name": "getPrice",
+				"name": "x",
 				"outputs": [
 					{
-						"internalType": "int256",
 						"name": "",
-						"type": "int256"
+						"type": "uint8"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": true,
 				"inputs": [],
-				"name": "location",
+				"name": "y",
 				"outputs": [
 					{
-						"internalType": "string",
 						"name": "",
-						"type": "string"
+						"type": "int8"
 					}
 				],
+				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
+				"constant": false,
 				"inputs": [],
-				"name": "price",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_location",
-						"type": "string"
-					}
-				],
-				"name": "setLocation",
+				"name": "f1",
 				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "int256",
-						"name": "_price",
-						"type": "int256"
-					}
-				],
-				"name": "setPrice",
-				"outputs": [],
+				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
 		"devdoc": {
-			"kind": "dev",
-			"methods": {},
-			"version": 1
+			"methods": {}
 		},
 		"userdoc": {
-			"kind": "user",
-			"methods": {},
-			"version": 1
+			"methods": {}
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/04_functions_setters_getters.sol": "Property"
+			"contracts/07_overflows_underflows.sol": "Property"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "byzantium",
 		"libraries": {},
-		"metadata": {
-			"bytecodeHash": "ipfs"
-		},
 		"optimizer": {
 			"enabled": false,
 			"runs": 200
@@ -111,12 +77,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/04_functions_setters_getters.sol": {
-			"keccak256": "0x4e9897891522136a15bffca16de71d99425ad1dab37ad16df4d58463bc679e28",
-			"license": "GPL-3.0",
+		"contracts/07_overflows_underflows.sol": {
+			"keccak256": "0x6a213d9ce611c80eb29d86c0fac973149b543745858e7053fdd4656f810d8aa7",
 			"urls": [
-				"bzz-raw://db379be2db47083744b04fd37d841cb350beb60be91afe0d8a032a9c90960487",
-				"dweb:/ipfs/QmZQkkmiZpSXN3zT67Ebt3fR7gX44iD1yNvV7nbZkwDmH7"
+				"bzzr://08151fde8409664af5f93f197cf795056683ef2d26071650661d1940f7113ce7"
 			]
 		}
 	},

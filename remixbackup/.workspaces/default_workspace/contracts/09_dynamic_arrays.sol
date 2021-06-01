@@ -21,7 +21,7 @@ contract DynamicArrays {  // can hold elements of any type
     } 
     
     // custom getter function with an error check
-
+    // view is for read only - unlike pure, which neither reads or writes from the chain
     function getElement(uint index) public view returns(uint){ 
      if( index < numbers.length ){ 
          return numbers[index]; 
