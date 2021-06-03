@@ -5,8 +5,6 @@ pragma solidity >= 0.5.0 <0.9.0;
 contract DynamicArrays {  // can hold elements of any type
     uint[] public numbers;  // empty numbers array - has 3 implicit methods: length, push, pop
     
-
-
     // 3 methods 
     
     // how many elements inside numbers array

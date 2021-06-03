@@ -31,7 +31,7 @@ contract BytesAndStrings {
       return(b1[i]);
       
       // index not available to strings.
-      // return(s1[i]); // error 
+      //  return(s1[i]); // error 
   }
   
   // length of bytes 
