@@ -1,0 +1,1 @@
+This folder is where Dan, Austin, Carlos, and Savan collaborate on Solidity learning.
