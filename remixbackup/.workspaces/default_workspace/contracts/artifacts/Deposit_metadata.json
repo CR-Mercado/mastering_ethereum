@@ -11,6 +11,30 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "anyoneTransferEther",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
@@ -57,7 +81,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/q.sol": "Deposit"
+			"contracts/16_contract_protection.sol": "Deposit"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -71,12 +95,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/q.sol": {
-			"keccak256": "0xc44b2fc71ade778f427534f758476b4fa4a3ed6eb061b3aa80af00a50f63175c",
+		"contracts/16_contract_protection.sol": {
+			"keccak256": "0x670f242214bb0dc4a5e26d7834f1ad9e3eb3e91605e4262c7fd5378b2654a268",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://90db91ebd9036d1b05b6b330c64dfc633295908d316f1a415c2185ca46635376",
-				"dweb:/ipfs/QmZ3VCwa63WvepFQPZo7RchrLQSv386AimFQ1cMwa4RS3o"
+				"bzz-raw://526c1c78f640a618f18f1f008ac8af32d626d7d94949b2b583e6be2f88aa4db4",
+				"dweb:/ipfs/QmVoS8eTmeE5nfsDpRNSdimuZPFx933m4o5PeJFVEQAmWF"
 			]
 		}
 	},

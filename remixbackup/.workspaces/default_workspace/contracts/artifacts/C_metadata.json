@@ -7,12 +7,12 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getX_external",
+				"name": "contract_a",
 				"outputs": [
 					{
-						"internalType": "int256",
+						"internalType": "contract A",
 						"name": "",
-						"type": "int256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -20,46 +20,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getY",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get_getX",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get_getXexternal",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "x",
+				"name": "xx",
 				"outputs": [
 					{
 						"internalType": "int256",
@@ -84,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/17_visibility.sol": "A"
+			"contracts/17_visibility.sol": "C"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},

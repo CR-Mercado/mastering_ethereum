@@ -22,6 +22,8 @@ contract Deposit {
     // can be empty
   } 
   
+  // BUT NOTE: without a receivable/fallback. The sendEther function is the ONLY way to put ETH in this contract
+  // Direct sends will fail. 
   
   // a public function, transferEther, that sends 'amount' to payable address 'recipient'
   // returns a boolean for success or failed 

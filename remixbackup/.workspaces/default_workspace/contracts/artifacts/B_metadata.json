@@ -7,6 +7,19 @@
 		"abi": [
 			{
 				"inputs": [],
+				"name": "derived_x",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getX_external",
 				"outputs": [
 					{
@@ -84,7 +97,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/17_visibility.sol": "A"
+			"contracts/17_visibility.sol": "B"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
