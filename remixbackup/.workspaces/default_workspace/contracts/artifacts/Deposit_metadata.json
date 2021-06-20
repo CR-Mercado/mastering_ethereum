@@ -6,8 +6,9 @@
 	"output": {
 		"abi": [
 			{
-				"stateMutability": "payable",
-				"type": "fallback"
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
 				"inputs": [],
@@ -24,38 +25,23 @@
 			},
 			{
 				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "sendEther",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "recipient",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "transferEther",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -71,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/15_contract_methods.sol": "Deposit"
+			"contracts/q.sol": "Deposit"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -85,12 +71,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/15_contract_methods.sol": {
-			"keccak256": "0x6678c156347e47b8c18490bbdbfc9bd7073f92132aac5744eba6892036ca59a3",
+		"contracts/q.sol": {
+			"keccak256": "0xc44b2fc71ade778f427534f758476b4fa4a3ed6eb061b3aa80af00a50f63175c",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c01d33660f5ed4dda8624f71246da479f07bfc5ee4f510825ec95248302ce1df",
-				"dweb:/ipfs/QmbxKD7h7CnQ8X6RYbMiV3fqT8ZN9aVFFizg3Qbrf1Lxmj"
+				"bzz-raw://90db91ebd9036d1b05b6b330c64dfc633295908d316f1a415c2185ca46635376",
+				"dweb:/ipfs/QmZ3VCwa63WvepFQPZo7RchrLQSv386AimFQ1cMwa4RS3o"
 			]
 		}
 	},
