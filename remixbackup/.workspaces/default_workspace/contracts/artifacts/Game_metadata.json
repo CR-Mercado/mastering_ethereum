@@ -6,13 +6,19 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getF",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "players",
 				"outputs": [
 					{
-						"internalType": "int256",
+						"internalType": "address",
 						"name": "",
-						"type": "int256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -20,15 +26,9 @@
 			},
 			{
 				"inputs": [],
-				"name": "x",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "start",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/28_Challenge8.sol": "B"
+			"contracts/27_Challenge7.sol": "Game"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -59,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/28_Challenge8.sol": {
-			"keccak256": "0xfa67416f88f128316e37cfd126f6f13a19c67dbd17a4a808a4d0f2df2e8228b8",
+		"contracts/27_Challenge7.sol": {
+			"keccak256": "0x939c8e4fc7d2a44e2fe4136513b2769bf7e4f237556d7f2d68bf3dc4df668a92",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6fcdd39c6a43f1872dff3efaae108303dbeab178fa520c752ddaad77ad26d2be",
-				"dweb:/ipfs/QmdDvUCxw8UfWAaj6QLev2q6wWZw1d21gAFeo5aC52HaLL"
+				"bzz-raw://a3621f05c6595a8cc0a741086747fa4a92e22781aacb8d22df292a2400aace91",
+				"dweb:/ipfs/QmXpwB5D1BffbuLpyy1VUeNApaTSodV3spr5FhT5G53fdc"
 			]
 		}
 	},

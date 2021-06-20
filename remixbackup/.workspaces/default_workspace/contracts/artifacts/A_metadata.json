@@ -7,58 +7,6 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getX_external",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getY",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get_getX",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get_getXexternal",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "x",
 				"outputs": [
 					{
@@ -84,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/17_visibility.sol": "A"
+			"contracts/28_Challenge8.sol": "A"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -98,12 +46,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/17_visibility.sol": {
-			"keccak256": "0x8140627d2be4aa833b096d9eefd9ec45b8104447b4cdb9c718bf6418d8190625",
+		"contracts/28_Challenge8.sol": {
+			"keccak256": "0xfa67416f88f128316e37cfd126f6f13a19c67dbd17a4a808a4d0f2df2e8228b8",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://4f101022f6de37675a241efe5fc858740095a209544557369952020355b04ae6",
-				"dweb:/ipfs/QmdHzn6uozg2d6GcfSpbV1ZRTYUcrDFWpLQzvLEvoUHJ28"
+				"bzz-raw://6fcdd39c6a43f1872dff3efaae108303dbeab178fa520c752ddaad77ad26d2be",
+				"dweb:/ipfs/QmdDvUCxw8UfWAaj6QLev2q6wWZw1d21gAFeo5aC52HaLL"
 			]
 		}
 	},
