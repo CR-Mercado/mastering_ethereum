@@ -6,45 +6,19 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "new_supply",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_recipient",
-						"type": "address"
-					}
-				],
-				"name": "EmergencyWithdrawal",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "admin",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalance",
+				"name": "getSupply",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -56,8 +30,49 @@
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "new_supply",
+						"type": "uint256"
+					}
+				],
+				"name": "setSupply",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -73,7 +88,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/26_Challenge6.sol": "Deposit"
+			"contracts/22_Challenge2.sol": "CryptosToken"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -87,12 +102,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/26_Challenge6.sol": {
-			"keccak256": "0x9fd7dd2771127068b870b8ebaf02d31c655272051a7c64c7e184d8cb3229af3d",
+		"contracts/22_Challenge2.sol": {
+			"keccak256": "0xcc11894c646cbd17161474261de27d0b219e638094857ec5012b99f0df69bccb",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://1cbee36db0fd980b532d16a4107dbeaa9cac53185ae68eb6d6cc2e666df87240",
-				"dweb:/ipfs/QmUpdfyAmypauGk3G6HwTnH3jFE37tSn3avJr3kPiafGLh"
+				"bzz-raw://e023354164ad8b05b2959c9586326ccd7bf5de094a762083d52338cd89e1af1f",
+				"dweb:/ipfs/QmPaY3MCvAxW7HXUKDpocJAvGyib3BR2XHggHymLpHABt8"
 			]
 		}
 	},
