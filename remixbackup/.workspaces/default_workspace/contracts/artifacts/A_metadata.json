@@ -6,13 +6,70 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "x",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_city",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"name": "changeCities",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "cities",
 				"outputs": [
 					{
-						"internalType": "int256",
+						"internalType": "string",
 						"name": "",
-						"type": "int256"
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "f_memory",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "f_storage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "i",
+						"type": "uint256"
+					}
+				],
+				"name": "getCities",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -32,7 +89,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/28_Challenge8.sol": "A"
+			"contracts/13_storage_memory.sol": "A"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -46,12 +103,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/28_Challenge8.sol": {
-			"keccak256": "0xfa67416f88f128316e37cfd126f6f13a19c67dbd17a4a808a4d0f2df2e8228b8",
+		"contracts/13_storage_memory.sol": {
+			"keccak256": "0x7e6e380755d12919176928e3e48e70b1745f94b728d5357e4018729759e40810",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6fcdd39c6a43f1872dff3efaae108303dbeab178fa520c752ddaad77ad26d2be",
-				"dweb:/ipfs/QmdDvUCxw8UfWAaj6QLev2q6wWZw1d21gAFeo5aC52HaLL"
+				"bzz-raw://a1ae3470ea75f4c1b8c8ad2fe17af3cd1905194c18afccb0bb63a1ab37cb6897",
+				"dweb:/ipfs/QmY3bL5syFLEKwSgD9M7Ap7EfMBT6RwKx9XDu1F4xTBDAh"
 			]
 		}
 	},
