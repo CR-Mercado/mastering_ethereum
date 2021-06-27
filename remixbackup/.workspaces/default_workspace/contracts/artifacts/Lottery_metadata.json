@@ -70,19 +70,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "pickWinner_test",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -153,11 +140,11 @@
 	},
 	"sources": {
 		"contracts/31_Lottery.sol": {
-			"keccak256": "0x81907c4522266eb6f6aa818760159d73e5510c9de7d5c2b1f8a66a89054dddff",
+			"keccak256": "0x5a34bf84799c461d378f3e58538c8d93e29771701de33c89ff82b35aca1f06c0",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cc1f569ed21ddf19b78b9ea9220bfa64aa801baa4290b841f07012caebfb7405",
-				"dweb:/ipfs/QmP9HjDiJbsak494AYcuBabeEtfFevZR2yvgt9GNm4hwkL"
+				"bzz-raw://d3c028d1eb153d41306b77124ce6655228f46752c7468f1ea2115293cca32bee",
+				"dweb:/ipfs/QmY8fx8L8s7QPWdByA4vvfeUbPjZywznzL88Teb3h3WQEM"
 			]
 		}
 	},

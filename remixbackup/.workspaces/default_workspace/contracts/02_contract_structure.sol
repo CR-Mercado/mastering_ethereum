@@ -4,7 +4,7 @@ pragma solidity ^0.8.2;
 
 contract Property {  
     // 3 state variables: property_image_URL, price, owner
-    address public property_image_URL;
+    string public property_image_URL;
     uint private price;  
     address public owner;  
     

@@ -1,75 +1,118 @@
 {
 	"compiler": {
-		"version": "0.5.0+commit.1d4f565a"
+		"version": "0.8.4+commit.c7e474f2"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"constant": true,
 				"inputs": [],
-				"name": "sold",
-				"outputs": [
-					{
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
-				"constant": true,
-				"inputs": [],
-				"name": "x",
-				"outputs": [
+				"anonymous": false,
+				"inputs": [
 					{
-						"name": "",
-						"type": "uint8"
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
 					}
 				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
+				"name": "OwnerChanged",
+				"type": "event"
 			},
 			{
-				"constant": true,
-				"inputs": [],
-				"name": "y",
-				"outputs": [
+				"inputs": [
 					{
-						"name": "",
-						"type": "int8"
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
 					}
 				],
-				"payable": false,
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [],
-				"name": "f1",
+				"name": "changeOwner",
 				"outputs": [],
-				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "property_image_URL",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "setPrice",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
 		"devdoc": {
-			"methods": {}
+			"kind": "dev",
+			"methods": {},
+			"version": 1
 		},
 		"userdoc": {
-			"methods": {}
+			"kind": "user",
+			"methods": {
+				"getPrice()": {
+					"notice": "Returns the price of Property "
+				}
+			},
+			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/07_overflows_underflows.sol": "Property"
+			"contracts/02_contract_structure.sol": "Property"
 		},
-		"evmVersion": "byzantium",
+		"evmVersion": "istanbul",
 		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
 		"optimizer": {
 			"enabled": false,
 			"runs": 200
@@ -77,10 +120,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/07_overflows_underflows.sol": {
-			"keccak256": "0x6a213d9ce611c80eb29d86c0fac973149b543745858e7053fdd4656f810d8aa7",
+		"contracts/02_contract_structure.sol": {
+			"keccak256": "0x790d7f64406d0cad742b2ecedb97d455c34c9135aa6bc24ca070702591895900",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzzr://08151fde8409664af5f93f197cf795056683ef2d26071650661d1940f7113ce7"
+				"bzz-raw://37804a96e563ba6cd4d3ead3c33ad491ce00a90d08521c8b74b64dfea9951eea",
+				"dweb:/ipfs/QmfEEvrcfwKhe3GL7HNEU6RUXbVR2WM54sLfjRLULovNwm"
 			]
 		}
 	},

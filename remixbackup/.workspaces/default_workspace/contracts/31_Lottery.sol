@@ -2,7 +2,7 @@
  /*
  - 1 ETH per lottery ticket - accepts but ignores smaller entrances; no benefit for oversends
  - Lottery is managed by a smart contract that deploys/controls the lottery
- - contract transfers 90% of the balance to the winner's address; 10% to the manager
+ - contract transfers 90% of the balance to the winner's address; 9% to the manager; 1% split among each unique entrant
  - lottery tracks the unique entrants for splitting a separate reward
  - lottery is then reset
  */
@@ -26,11 +26,11 @@
      // some terms & conditions apply.
      receive() external payable { 
          
-         // don't allow tiny spam sends.
+         // don't even allow tiny spam sends.
          require(msg.value >= 0.001 ether);
          
          // Player only added if they add at least 1 ether
-         // no benefit for adding more than 1
+         // no benefit for adding more than 1.
          
          if( msg.value >= 1 ether ){
              
@@ -44,7 +44,7 @@
             }
              
          } else { 
-         // don't add people who don't pay the minimum fee;
+         // don't add people who don't pay the minimum fee; just take their money 
          }
          
      } 
@@ -76,19 +76,6 @@
                  abi.encodePacked(block.difficulty, block.timestamp, players.length) ));
      } 
      
-     // picks a winning address but doesn't alter the blockchain
-     function pickWinner_test() public view returns(address){ 
-         require(msg.sender == manager);
-         require(players.length >= 3); 
-         
-         uint r = badRandom(); 
-         address payable winner; 
-         
-         uint index = r % players.length; 
-         winner = players[index];
-         return winner;
-     } 
-     
      
      function saveLastParticipants() internal {
          previous_participants = unique_entrants; 
@@ -98,7 +85,7 @@
      
      function pickWinner() public{
          
-         require(msg.sender == manager);
+         require(msg.sender == manager, "you're not authorized to make call this function");
          
          // save unique entrants 
         saveLastParticipants();
@@ -113,13 +100,18 @@
          
          // Winner get's 90% of all funds. 
          uint amount = 9 * getBalance() / 10;
+         
+         // 10% for manager + split
          uint leftover = getBalance() - amount;
+         
+         // calculate split 
          uint split = 1 * leftover / 10; 
          
+         // 9% to manager 
          leftover = leftover - split; 
          
          
-         require(getBalance() == amount + leftover);
+         require(getBalance() == amount + leftover + split, "Something went wrong with splitting the money");
          
          winner.transfer( amount );
          
@@ -127,12 +119,10 @@
          manager.transfer( leftover ); 
          
          // unique participants get 1/N of 1% each regardless of # of entries
-         
-         for(uint i = 0; i < unique_entrants.length; i++){
-             
           uint share = 1 * split / unique_entrants.length;
-          unique_entrants[i].transfer(share);   
-             
+          
+         for(uint i = 0; i < unique_entrants.length; i++){
+          unique_entrants[i].transfer(share);
          }
          
          // after everything is done, reset the lottery
