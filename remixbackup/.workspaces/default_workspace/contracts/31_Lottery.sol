@@ -1,5 +1,8 @@
 
  /*
+ 
+ This is an abstract of the custom FAIR lottery I am designing.
+ 
  - 1 ETH per lottery ticket - accepts but ignores smaller entrances; no benefit for oversends
  - Lottery is managed by a smart contract that deploys/controls the lottery
  - contract transfers 90% of the balance to the winner's address; 9% to the manager; 1% split among each unique entrant
