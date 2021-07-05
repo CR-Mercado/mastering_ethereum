@@ -1,15 +1,26 @@
 {
 	"compiler": {
-		"version": "0.8.4+commit.c7e474f2"
+		"version": "0.8.0+commit.c7dfd78e"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
 				"inputs": [],
-				"name": "bid",
-				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "auctionState",
+				"outputs": [
+					{
+						"internalType": "enum Auction.State",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -21,6 +32,98 @@
 					}
 				],
 				"name": "bids",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cancelAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "endBlock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBidder",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBindingBid",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ipfsHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "placeBid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startBlock",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -45,7 +148,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/12_mappings.sol": "Auction"
+			"contracts/41_Auction.sol": "Auction"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -59,12 +162,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/12_mappings.sol": {
-			"keccak256": "0x51f1ead4e01fbb14d023f9e75c8cf3cbbd15ed2a7dbc96364f69cfcef65e299e",
+		"contracts/41_Auction.sol": {
+			"keccak256": "0x6bcabbef6559b3b80cc07882ecbeb3305610de0354224196df2aae8f2a844164",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d91e19b12bcd242c4cebc72e2c763fe8946aa239f61d440b9fb2aabb2af1bc67",
-				"dweb:/ipfs/QmT5auQ2J5idyE5UeDLtQbrRNgkzTPM9t5XyUhdUpmVB1Y"
+				"bzz-raw://a13ab336457de75d560277db05f53acd825cdeda543908601e2258040c943984",
+				"dweb:/ipfs/QmSkVLnFqb3WAm3UWUc46SkqiiR8NrTyEDXDLGWtJrtgsC"
 			]
 		}
 	},
