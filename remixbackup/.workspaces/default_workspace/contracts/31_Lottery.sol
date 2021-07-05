@@ -52,6 +52,31 @@
          
      } 
      
+     function payable buyTicket() public returns(bool){ 
+            
+        require(msg.value >= 0.001 ether);
+         
+         // Player only added if they add at least 1 ether
+         // no benefit for adding more than 1.
+         
+         if( msg.value >= 1 ether ){
+             
+            players.push(payable(msg.sender));
+            
+            // if this is their first valid entrance, add them to unique entrants
+            // otherwise they can enter as many times as they want, but it won't be included in the unique_entrants array
+            if( check_entrants[msg.sender] == 0 ){ 
+             unique_entrants.push(payable(msg.sender)); 
+             check_entrants[msg.sender] = check_entrants[msg.sender] + msg.value;
+            }
+             
+         } else { 
+         // don't add people who don't pay the minimum fee; just take their money 
+         }
+         
+     }
+     
+     
      // check balance 
      // Anyone can see the balance 
      function getBalance() public view returns(uint){

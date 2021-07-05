@@ -11,29 +11,16 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
+				"inputs": [],
+				"name": "getLocation",
+				"outputs": [
 					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
-				"name": "OwnerChanged",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
-					}
-				],
-				"name": "changeOwner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -41,9 +28,22 @@
 				"name": "getPrice",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "int256",
 						"name": "",
-						"type": "uint256"
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "location",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -64,12 +64,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "property_image_URL",
+				"name": "price",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "int256",
 						"name": "",
-						"type": "string"
+						"type": "int256"
 					}
 				],
 				"stateMutability": "view",
@@ -78,9 +78,22 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
+						"name": "_location",
+						"type": "string"
+					}
+				],
+				"name": "setLocation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
 						"name": "_price",
-						"type": "uint256"
+						"type": "int256"
 					}
 				],
 				"name": "setPrice",
@@ -96,17 +109,13 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {
-				"getPrice()": {
-					"notice": "Returns the price of Property "
-				}
-			},
+			"methods": {},
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/02_contract_structure.sol": "Property"
+			"contracts/04_functions_setters_getters.sol": "Property"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -120,12 +129,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/02_contract_structure.sol": {
-			"keccak256": "0x790d7f64406d0cad742b2ecedb97d455c34c9135aa6bc24ca070702591895900",
+		"contracts/04_functions_setters_getters.sol": {
+			"keccak256": "0x0f16fec205f949938f7541daa64e26b21a0e2cce7940e1ca1851a9785019136f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://37804a96e563ba6cd4d3ead3c33ad491ce00a90d08521c8b74b64dfea9951eea",
-				"dweb:/ipfs/QmfEEvrcfwKhe3GL7HNEU6RUXbVR2WM54sLfjRLULovNwm"
+				"bzz-raw://26e13cdcdedce72a1012a97f668d0f51d73da9fd190ad821deff6f9784bb7429",
+				"dweb:/ipfs/QmeqS74xkXmjHtD6PjFGwYDS3aPfacUiRSM4zZEJ9Q2jDK"
 			]
 		}
 	},
