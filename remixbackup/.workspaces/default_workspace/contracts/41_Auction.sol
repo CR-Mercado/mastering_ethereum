@@ -2,8 +2,24 @@
  pragma solidity ^0.8.0; 
  
  /*
- An auction 
+ Decentralized deployment of Auctions 
  */
+ 
+ 
+ contract auctionCreator { 
+  address public creatorOwner; 
+  Auction[] public deployedAuctions; 
+  
+  constructor(){ 
+   creatorOwner = msg.sender; // owner of the creator contract is the original deployer (i.e. Auction Administrator)   
+  }
+  
+  function createAuction() public { 
+    Auction new_auction_address = new Auction(msg.sender); // pass caller to Auction constructor as eoa
+    deployedAuctions.push(new_auction_address); 
+  } 
+    
+} 
  
  contract Auction { 
      
@@ -23,8 +39,8 @@
      uint bidIncrement; // ebay style auction 
      
      
-     constructor(){ 
-      owner = payable(msg.sender); //  owner is contract deployer recorded as payable
+     constructor(address eoa){  // see auction creator template 
+      owner = payable(eoa); //  owner is contract creator recorded as payable
       auctionState = State.Running; // initiate auction upon deployment 
       startBlock = block.number;  // ETH blocks occur roughly every 15 seconds, safer to use that than to rely on miners who may spoof 
                 // endBlock = startBlock + 40320; // roughly 40,000 blocks per week    
