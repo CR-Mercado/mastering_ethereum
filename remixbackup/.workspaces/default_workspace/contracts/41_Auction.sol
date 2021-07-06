@@ -8,9 +8,9 @@
  contract Auction { 
      
      // Variables 
-     address payable public owner; // publicly visible owner of the auction who gets paid 
-     uint public startBlock; 
-     uint public endBlock; // because block.timestamp can be spoofed by miners it is not best practice to use in this setting
+     address payable public owner; // publicly visible owner of the auction who gets paid by winner 
+     uint public startBlock; // because block.timestamp can be spoofed by miners it is not best practice to use in this setting
+     uint public endBlock;  // ( end block - start block ) * 15 seconds is a rough time calculator that can't be spoofed 
      string public ipfsHash; // because state variables are expensive, its cheaper to use a separate storage solution like 
                              // interplanetary file system (IPFS) and then just store the hash in the contract 
      enum State {Started, Running, Ended, Canceled} // enumerate class State with 4 possible values - no semicolon
@@ -23,14 +23,14 @@
      uint bidIncrement; // ebay style auction 
      
      
-     
      constructor(){ 
       owner = payable(msg.sender); //  owner is contract deployer recorded as payable
       auctionState = State.Running; // initiate auction upon deployment 
       startBlock = block.number;  // ETH blocks occur roughly every 15 seconds, safer to use that than to rely on miners who may spoof 
-      endBlock = startBlock + 40320; // roughly 40,000 blocks per week    
+                // endBlock = startBlock + 40320; // roughly 40,000 blocks per week    
+      endBlock = startBlock + 3; // for testing purposes only 3 blocks used  
       ipfsHash = ""; // initiate as empty string 
-      bidIncrement = 100; // denominated in wei 
+      bidIncrement = 1 ether; // denominated in ether for testing 
      }
      
      
@@ -52,7 +52,7 @@
      
      // only owner can cancel an auction 
      modifier onlyOwner() { 
-         require(msg.sender == owner);
+         require(msg.sender == owner, "You aren't the owner");
          _; 
      } 
      
@@ -71,7 +71,7 @@
        require(auctionState == State.Running, "Auction is not running"); // auction must be running; 
        require(msg.value >= bidIncrement, "Must add at least 1 bid increment to your bid"); // minimum send for adding to your past bids 
          
-         uint currentBid = bids[msg.sender] + msg.value; // bidder adds to their bid when they place a bid  
+       uint currentBid = bids[msg.sender] + msg.value; // bidder adds to their bid when they place a bid  
        
        require(currentBid > highestBindingBid, "your addition doesn't beat the current highest binded bid");
        
@@ -88,12 +88,59 @@
          highestBidder = payable(msg.sender);
        } 
        
-    
      } 
      
+     // never attempt to send eth automatically to users
+     // best practice is to require them to claim their eth 
+     // this is because of malicious fallback traps that can empty an insecure contract 
      function cancelAuction() public onlyOwner { 
        auctionState = State.Canceled;  
      } 
+     
+     // separate mechanism for claiming funds 
+     function finalizeAuction() public { 
+       require(auctionState == State.Canceled || block.number  > endBlock, "Auction isn't cancelled or finished"); // auction is cancelled OR ends naturally 
+       require(msg.sender == owner || bids[msg.sender] > 0, "You didn't bid or aren't the owner."); // owner OR an auction participant can call this function 
+       
+       // prep to send money
+       address payable recipient; 
+       uint value; 
+       
+       // if cancelled, people can claim their funds back 
+       if(auctionState == State.Canceled){ 
+           recipient = payable(msg.sender); 
+           value = bids[msg.sender]; 
+           bids[msg.sender] = 0; // empty their account before sending anything.
+           
+       } else {  // if ended naturally
+       
+        // owner can get the highest bid 
+           if(msg.sender == owner) { 
+           recipient = owner;
+           value = highestBindingBid;
+           
+           } else { 
+        
+        // highest bidder can get partial refund
+            if(msg.sender == highestBidder){ 
+                 recipient = highestBidder; 
+        value = bids[highestBidder] - highestBindingBid;
+        bids[msg.sender] = 0; // empty their account before sending anything.
+       
+        // any other bidder can get their balance 
+            } else { 
+           recipient = payable(msg.sender); 
+           value = bids[msg.sender]; 
+           bids[msg.sender] = 0; // empty their account before sending anything.
+                } 
+           }
+       } 
+       
+       recipient.transfer(value); // should be protected since bids are emptied 
+       auctionState = State.Ended; // End the auction - owner can change to cancelled if needed 
+     } // finalizeAuction
+     
+     
      
      
      
