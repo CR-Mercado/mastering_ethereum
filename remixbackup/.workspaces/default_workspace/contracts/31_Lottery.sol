@@ -52,7 +52,7 @@
          
      } 
      
-     function payable buyTicket() public returns(bool){ 
+     function buyTicket() public payable { 
             
         require(msg.value >= 0.001 ether);
          
@@ -67,7 +67,7 @@
             // otherwise they can enter as many times as they want, but it won't be included in the unique_entrants array
             if( check_entrants[msg.sender] == 0 ){ 
              unique_entrants.push(payable(msg.sender)); 
-             check_entrants[msg.sender] = check_entrants[msg.sender] + msg.value;
+             check_entrants[msg.sender] = check_entrants[msg.sender] + msg.value; // should be always equal 0 + msg.value 
             }
              
          } else { 

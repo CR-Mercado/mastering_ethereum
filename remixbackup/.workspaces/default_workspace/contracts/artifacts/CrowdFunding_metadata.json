@@ -6,13 +6,50 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_goal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
 				"inputs": [],
-				"name": "badRandom",
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contribute",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "contributors",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -25,9 +62,15 @@
 			},
 			{
 				"inputs": [],
-				"name": "buyTicket",
-				"outputs": [],
-				"stateMutability": "payable",
+				"name": "deadline",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -45,70 +88,58 @@
 			},
 			{
 				"inputs": [],
-				"name": "getNumEntries",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getNumPlayers",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "pickWinner",
+				"name": "getRefund",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "goal",
+				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"name": "players",
-				"outputs": [
-					{
-						"internalType": "address payable",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "minContribution",
+				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "previous_participants",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numContributors",
 				"outputs": [
 					{
-						"internalType": "address payable",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "raisedAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -132,7 +163,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/31_Lottery.sol": "Lottery"
+			"contracts/51_Crowdfunding.sol": "CrowdFunding"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -146,12 +177,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/31_Lottery.sol": {
-			"keccak256": "0x117189357ad45a3e26ed5112352a096bdc0b80fb3f66f932b3b83ded9c4325b0",
+		"contracts/51_Crowdfunding.sol": {
+			"keccak256": "0x24ab78fd6133e16daf635ef0f7a0365b5c352e18f6dbedcf3d54664cc2e67486",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://0713433e4b1ecc02ae7a67d46b2d8ca8b39b1fa2e31ed9ecab09bf23ee99ba57",
-				"dweb:/ipfs/Qmet3hNrRqFDDdNA9YhgGiE3V6MBAVenGJgbHVoPxqoBt3"
+				"bzz-raw://d78cbdca86e4fea0fe5eb2e84bf025f0d4b2c1ccfcd8a0db4ab487e41b8f533b",
+				"dweb:/ipfs/QmYV4Hkjo85q8k56PV9SqrFMWVpUAqTAm3XFizUaptZ2ne"
 			]
 		}
 	},

@@ -7,16 +7,16 @@
  
  
  contract auctionCreator { 
-  address public creatorOwner; 
-  Auction[] public deployedAuctions; 
+  address public creatorOwner;  // public state variable automatically has getter function 
+  Auction[] public deployedAuctions; // public array automatically has getter function 
   
   constructor(){ 
-   creatorOwner = msg.sender; // owner of the creator contract is the original deployer (i.e. Auction Administrator)   
+   creatorOwner = msg.sender; // owner of the creator contract is the original deployer (i.e. Auction Contract Administrator, not new Auctioneer)   
   }
   
   function createAuction() public { 
-    Auction new_auction_address = new Auction(msg.sender); // pass caller to Auction constructor as eoa
-    deployedAuctions.push(new_auction_address); 
+    Auction new_auction_address = new Auction(msg.sender); // pass caller to Auction constructor as eoa; makes them owner of a their auction 
+    deployedAuctions.push(new_auction_address); // track these auctions
   } 
     
 } 
@@ -89,6 +89,8 @@
          
        uint currentBid = bids[msg.sender] + msg.value; // bidder adds to their bid when they place a bid  
        
+       // new bids are required to raise floor price; 
+       // cumulative bidding below floor price is reverted 
        require(currentBid > highestBindingBid, "your addition doesn't beat the current highest binded bid");
        
        bids[msg.sender] = currentBid; // update bidder's total amount bid. 
@@ -115,7 +117,7 @@
      
      // separate mechanism for claiming funds 
      function finalizeAuction() public { 
-       require(auctionState == State.Canceled || block.number  > endBlock, "Auction isn't cancelled or finished"); // auction is cancelled OR ends naturally 
+       require(auctionState == State.Canceled || block.number  > endBlock, "Auction isn't cancelled or finished"); // auction is cancelled OR ended naturally 
        require(msg.sender == owner || bids[msg.sender] > 0, "You didn't bid or aren't the owner."); // owner OR an auction participant can call this function 
        
        // prep to send money
@@ -132,7 +134,7 @@
        
         // owner can get the highest bid 
            if(msg.sender == owner) { 
-           recipient = owner;
+           recipient = owner; // note: owner already payable, does not need payable() wrapping.
            value = highestBindingBid;
            
            } else { 
